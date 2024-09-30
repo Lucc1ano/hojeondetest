@@ -3,6 +3,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
+import java.util.UUID;
 
 @Entity
 @Table (name = "Ingressos")
@@ -12,8 +13,8 @@ import java.util.Date;
 @NoArgsConstructor
 public class Ingressos {
     @Id
-    @GeneratedValue (strategy = GenerationType.UUID)
-    private String id_ingresso;
+    @GeneratedValue (strategy = GenerationType.AUTO)
+    private UUID id_ingresso;
     private String Tipo;
     private String valor;
     private String quantidade;

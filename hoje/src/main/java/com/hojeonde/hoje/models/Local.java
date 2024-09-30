@@ -3,6 +3,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
+import java.util.UUID;
 
 @Entity
 @Table (name = "Local")
@@ -12,8 +13,8 @@ import java.util.Date;
 @NoArgsConstructor
 public class Local {
     @Id
-    @GeneratedValue (strategy = GenerationType.UUID)
-    private String id_Local;
+    @GeneratedValue (strategy = GenerationType.AUTO)
+    private UUID id_local;
     private String nome;
     private String endereço;
     private String capacidade;
