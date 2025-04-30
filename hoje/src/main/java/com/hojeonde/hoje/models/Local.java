@@ -18,4 +18,7 @@ public class Local {
     private String nome;
     private String endereço;
     private String capacidade;
+      
+    @OneToMany
+    Evento evento;
 }
