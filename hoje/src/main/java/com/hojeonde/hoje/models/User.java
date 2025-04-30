@@ -15,7 +15,7 @@ import java.util.UUID;
 @NoArgsConstructor
 public class User {
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
+    @GeneratedValue (strategy = GenerationType.UUID)
     private UUID id_user;
     private String cpf;
     private String nome;
