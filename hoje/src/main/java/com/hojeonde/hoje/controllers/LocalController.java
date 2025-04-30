@@ -3,34 +3,36 @@ package com.hojeonde.hoje.controllers;
 import com.hojeonde.hoje.models.Local;
 import com.hojeonde.hoje.services.LocalService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
-@RequestMapping("/local")
+@RequestMapping("/locais")
 public class LocalController {
+
     @Autowired
     private LocalService localService;
 
     @GetMapping
-    public List<Local> getAllLocais() {
+    public ResponseEntity<List<Local>> listarLocais() {
         return localService.findAll();
     }
 
     @GetMapping("/{id}")
-    public Local getLocalById(@PathVariable String id) {
+    public ResponseEntity<Local> buscarLocalPorId(@PathVariable UUID id) {
         return localService.findById(id);
     }
 
     @PostMapping
-    public Local createLocal(@RequestBody Local local) {
+    public ResponseEntity<Local> criarLocal(@RequestBody Local local) {
         return localService.save(local);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteLocal(@PathVariable String id) {
-        localService.delete(id);
+    public ResponseEntity<Void> deletarLocal(@PathVariable UUID id) {
+        return localService.delete(id);
     }
 }
-
