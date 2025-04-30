@@ -13,7 +13,7 @@ import java.util.UUID;
 @NoArgsConstructor
 public class Ingressos {
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
+    @GeneratedValue (strategy = GenerationType.UUID)
     private UUID id_ingresso;
     private String Tipo;
     private String valor;
