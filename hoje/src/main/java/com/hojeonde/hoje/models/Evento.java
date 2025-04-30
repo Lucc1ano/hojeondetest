@@ -14,9 +14,9 @@ import java.util.UUID;
 
 public class Evento {
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
+    @GeneratedValue (strategy = GenerationType.UUID)
     private UUID id_evento;
-    private String name;
+    private String nome;
     private String descriçao;
     private String data_inicio;
     private String data_fim;
