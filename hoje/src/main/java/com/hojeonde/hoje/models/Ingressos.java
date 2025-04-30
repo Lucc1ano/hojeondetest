@@ -19,4 +19,8 @@ public class Ingressos {
     private String valor;
     private String quantidade;
     private String lote;
+
+      @ManyToOne
+    Evento evento;
+    
 }
