@@ -13,7 +13,7 @@ import java.util.UUID;
 @NoArgsConstructor
 public class Local {
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
+    @GeneratedValue (strategy = GenerationType.UUID)
     private UUID id_local;
     private String nome;
     private String endereço;
