@@ -20,4 +20,7 @@ public class Organizador {
     private String nome;
     private String email;
     private String telefone;
+
+     @OneToOne
+    Evento evento;
 }
