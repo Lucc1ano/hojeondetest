@@ -15,7 +15,7 @@ import java.util.UUID;
 @NoArgsConstructor
 public class Organizador {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id_organizador;
     private String nome;
     private String email;
